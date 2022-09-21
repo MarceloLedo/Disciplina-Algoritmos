@@ -1,0 +1,219 @@
+Turma_A_Grupo_1_A1T1.
+Alunos:
+Antônio Justino Pereira Neto
+Augusto Roberto Herculano
+Bruno Lamounier
+Ezequiel de Paula Santos
+Marcelo Souza Ledo
+Marcos Vinicius Esteves
+
+DESENVOLVER A CODIFICAÇÃO EM LINGUAGEM CONFORME OS REQUISITOS ABAIXO. O RESULTADO
+ESPERADO É UM ÚNICO PROGRAMA EM LINGUAGEM C CAPAZ DE RESOLVER OS PROBLEMAS
+ESPERADOS PELO ENUNCIADO.
+• Elabore um programa que exiba um menu de opções, onde o usuário poderá escolher dentre as 3 opções
+diferentes listadas abaixo:
+a. Se ele escolher a opção 1 será executado o ALGORITMO DE DIVISÃO.
+b. Se ele escolher a opção 2 será executado o ALGORITMO MÉDIA.
+c. Se ele escolher a opção 3 será executado o ALGORITMO TABUADA.
+O QUE FAZ CADA OPÇÃO ESCOLHIDA:
+• ALGORITMO DIVISÃO
+a. O programa deverá efetuar a leitura de 2 números inteiros digitados pelo usuário e na sequência
+apresentar os números digitados e o resultado da operação de divisão. Não permitir divisões por 0.
+• ALGORITMO MÉDIA
+a. Ler os valores de quatro notas escolares bimestrais de um aluno. Calcular a média aritmética desse
+aluno e apresentar a mensagem "Aprovado" se a média obtida for maior ou igual a 7; caso contrário,
+o programa deve solicitar a quinta nota (nota de exame) do aluno e calcular uma nova média
+aritmética entre a nota de exame e a primeira média aritmética. Se o valor da nova média for maior
+ou igual a sete, apresentar a mensagem "Aprovado em exame"; caso contrário, apresentar a
+mensagem "Reprovado". Informar também, após a apresentação das mensagens, o valor da média
+obtida pelo aluno.
+• ALGORITMO TABUADA
+a. Fazer a leitura de 4 valores numéricos inteiros. O programa deverá verificar destes 4 números
+inteiros quais fazem parte da tabuada do 2 e do 3 ao mesmo tempo. Deve informar ao usuário a
+mensagem: “Os números XXXXX fazem parte da tabuada do 2 e do 3 ao mesmo tempo e os
+números YYYYY não fazem parte!”
+b. Entende-se por XXXX os números digitados que se enquadram na condição lógica por YYYYY os
+números digitados pelo usuário que não se enquadram.
+MAIS INFORMAÇÕES
+• Caso o usuário digite alguma opção não listada no menu, deve-se apresentar a mensagem:
+a. Você não digitou nenhuma opção válida do menu!
+• Termine seu programa com a mensagem:
+a. Obrigado, Volte Sempre!
+
+
+Resolução:
+
+
+/******************************************************************************
+
+                            Algoritmo_de_Divisão_Media_Tabuada
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+
+int main()
+{
+    int opcao=0;
+    char op;
+    int num1=0;
+    int num2=0;
+    int num3=0;
+    int num4=0;
+    int tab2=0;
+    int tab3=0;
+    int x1=0;
+    int x2=0;
+    int x3=0;
+    int x4=0;
+    int nota1=0;
+    int nota2=0;
+    int nota3=0; 
+    int nota4=0;
+    int nota5=0;
+    int exame=0;
+    int media=0;
+    
+    printf("===========================================================================");
+        printf("\nAlgoritmo de Divisão, Media e Tabuada!");
+    printf("\n==========================================================================="); 
+    printf("\n");
+    
+    printf("Digite 1 para Algoritmo de divisão\n");
+    printf("Digite 2 para Algoritmo média\n");
+    printf("Digite 3 para Algoritmo Tabuada\n");
+    printf("Digite uma opção: ");
+    scanf("%d", &opcao);
+    switch(opcao){
+        case 1:
+         printf ("Digite dois numeros inteiros e a operação / de divisão \n");
+         scanf ("%d %d %c", &num1, &num2, &op);
+           switch (op) {
+           case '/':
+            if (num1, num2 == 0)
+              printf ("Não é possivel fazer divisão com 0 \n");
+            else
+              printf ("%d %c %d = %d \n", num1, op, num2, num1/num2);
+           break;
+           default :
+            printf ("Não é operador de divisão \n");
+    }
+
+        break;
+        case 2:
+         printf("Digite sua primeira nota: ");
+    scanf("%d",&nota1);
+    printf("Digite sua segunda nota: "); 
+    scanf("%d",&nota2);
+    printf("Digite sua terceira nota: ");
+    scanf("%d",&nota3);
+    printf("Digite sua quarta nota: ");
+    scanf("%d",&nota4);
+    media=(nota1+nota2+nota3+nota4)/4; 
+    
+    if(media>=7){
+        printf("Você foi aprovado!\n");
+    }
+    
+    if(media<7){
+        printf("Por favor, digite sua nota de exame: ");
+        scanf("%d",&nota5);
+        exame=(media+nota5)/2;
+       printf("Seu resultado foi: %d\n",exame);
+       if(exame>=7){
+           printf("Você foi aprovado por exame!\n");
+       } if(exame<7){
+           printf("Você foi reprovado."); 
+       }   printf("Sua média foi: %d\n ",exame); 
+    }   
+    
+     break;
+        case 3:
+         num1=0;
+         num2=0;
+         num3=0;
+         num4=0;
+         printf("Digite 4 numeros inteiros:\n");
+         scanf("%d", &num1);
+         scanf("%d", &num2);
+         scanf("%d", &num3);
+         scanf("%d", &num4);
+    
+           tab2=num1%2;
+           tab3=num1%3;
+               if ((tab2==0) && (tab3==0)){
+                  x1=1;
+                   }
+                else{
+                   x1=2;
+                   
+                    }
+            tab2=num2%2;
+            tab3=num2%3;
+               if ((tab2==0) && (tab3==0)){
+                  x2=1;
+                   }
+                else{
+                  x2=2;
+                   
+                    }
+           tab2=num3%2;
+           tab3=num3%3;
+               if ((tab2==0) && (tab3==0)){
+                  x3=1;
+                   }
+                else{
+                   x3=2;
+                   
+                    }
+            tab2=num4%2;
+            tab3=num4%3;
+               if ((tab2==0) && (tab3==0)){
+                  x4=1;
+                   }
+                else{
+                   x4=2;
+                    }   
+                
+                if(x1==1){
+                    printf("%d é da tabuada do 2 e 3\n",num1);
+                }
+                    if(x2==1){
+                    printf("%d é da tabuada do 2 e 3\n",num2);
+                }
+                    if(x3==1){
+                    printf("%d é da tabuada do 2 e 3\n",num3);
+                }
+                 if(x4==1){
+                    printf("%d é da tabuada do 2 e 3\n",num4);
+                
+                }
+                else{
+                    if(x1==2){
+                    printf("%d não é da tabuada do 2 e 3\n",num1);
+                }
+                    if(x2==2){
+                    printf("%d não é da tabuada do 2 e 3\n",num2);
+                }
+                    if(x3==2){
+                    printf("%d não é da tabuada do 2 e 3\n",num3);
+                }
+                 if(x4==2){
+                    printf("%d não é da tabuada do 2 e 3\n",num4);
+                }
+                }
+                break;
+          
+          
+     default :
+      printf("Você não digitou nenhuma opção válida do menu!");
+      printf("\n");
+      
+    }   
+    printf("\n");
+    printf("===========================================================================");
+        printf("\nObrigado, Volte Sempre!");
+    printf("\n===========================================================================");    
+    return 0;
+}

@@ -1,0 +1,22 @@
+#include <iostream>
+#include <stdio.h>
+
+using namespace std;
+
+int main()
+{
+    float salarioBruto;
+    float salarioliquido;
+    
+    printf("%f \n", salarioBruto);
+    salarioBruto=1000;
+    salarioliquido=salarioBruto-50;
+    printf("%f ", salarioBruto);
+    printf("%f ", salarioliquido);
+    printf("%f \n",salarioBruto);
+    printf("%f \n", salarioliquido);
+    printf("%f \n %f \n", salarioBruto,salarioliquido);
+    printf("O Salario bruto é: %f \ne o Salario Liquido é: %f \n", salarioBruto, salarioliquido);
+    
+    return 0;
+}

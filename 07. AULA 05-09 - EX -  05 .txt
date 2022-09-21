@@ -1,0 +1,41 @@
+/******************************************************************************
+ Problema:
+  Elaborar um programa que mostre na tela todos os numeros de 1 ate o numero 
+    escolhido pelo usuario. ao final exibir a messagem "fim do programa!"
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    int num=0;
+    int x=0;
+    int y=0;
+    
+    do{
+    printf("informe um numero: \n");
+    scanf("%d", &num);
+    printf("\n");
+    x=0;
+    
+        
+      while(x!=num)
+      {
+        x=x+1;
+        printf("%d\n", x);
+        
+        
+      }
+      y=1;
+    printf("Deseja Continuar (1)sim (0)não:");
+    scanf("%d", &y);
+    }while(y==1);  
+  
+    
+   printf("\n");
+   printf("FIM DO PROGRAMA");
+
+
+    return 0;
+}

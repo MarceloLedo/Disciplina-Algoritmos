@@ -1,0 +1,52 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    float slmin=0;
+    float qtdagua=0;
+    float vlcontagua =0;
+    float vlcontagualiq=0;
+    float vllitro=0;
+    float vldesc=0;
+    
+    printf("Informe o valor do salario minimo: ");
+    scanf("%f", &slmin);
+    printf("Informe a quantidade ques gastou de agua em litros: ");
+    scanf("%f", &qtdagua);
+    //printf("valor inserido é %0.2f ", slmin);
+    //printf("valor inserido é %0.2f ", qtdagua);
+    vllitro=((slmin*0.02)/1000);
+    //printf("valor inserido é %0.2f ", vllitro);
+    vlcontagua=(vllitro*qtdagua);
+    vldesc=(vlcontagua*0.15);
+    vlcontagualiq=(vlcontagua-vldesc);
+    
+    printf(" \n");
+    printf("====================================================================\n");
+    printf("Calculo da conta de água\n");
+    printf("====================================================================\n");
+    printf("O valor do salario minimo é: %0.2f \n", slmin);
+    printf("A Quantididade gasta de agua foi: %0.2f\n", qtdagua);
+    printf("O valor da conta de água foi: %0.2f \n", vlcontagua);
+    printf("O valor do desconto foi: %0.2f \n", vldesc);
+    printf("O valor da conta de água com desconto foi: %0.2f\n", vlcontagualiq);
+    printf("\n");
+    printf("====================================================================\n");
+    printf("Obrigado volte sempre\n");
+    printf("====================================================================\n");
+    
+    
+    
+    
+    
+    
+    return 0;
+}

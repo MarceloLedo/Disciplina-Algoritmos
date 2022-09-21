@@ -1,0 +1,21 @@
+int main()
+{
+    int num1, num2;
+    char op;
+    
+    printf ("Digite dois numeros inteiros e a operação / de divisão \n");
+    scanf ("%d %d %c", &num1, &num2, &op);
+    
+    switch (op) {
+        case '/':
+        if (num1, num2 == 0)
+        printf ("Não é possivel fazer divisão com 0 \n");
+        else
+            printf ("%d %c %d = %d \n", num1, op, num2, num1/num2);
+            break;
+        default :
+        printf ("Não é possivel fazer divisão com 0 \n");
+    }
+
+    return 0;
+}

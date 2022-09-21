@@ -1,0 +1,33 @@
+/******************************************************************************
+
+                          Algoritmo sairdecasa
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    int opcao=0;
+    printf("Digite 1 para praia\n");
+    printf("Digite 2 para cinema\n");
+    printf("Digite 1 para churasco\n");
+    printf("Digite uma opção: ");
+    scanf("%d", &opcao);
+    switch(opcao){
+        case 1:
+         printf("sair de casa ás 8h");
+         break;
+        case 2:
+         printf("sair de casa ás 14h");
+         break;
+         case 3:
+         printf("sair de casa ás 12h");
+         break
+         
+        default :
+         printf("já que não optou fique em casa mesmo");
+    }
+
+    return 0;
+}

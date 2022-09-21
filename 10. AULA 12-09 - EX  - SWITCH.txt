@@ -1,0 +1,43 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main(){
+int num=0;
+int resp=0;
+int op=0;
+
+    do {
+    printf("-.-.-.-.-.-.-.--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-");
+    printf("\n                     INICIO DO PROGRAMA\n");
+    printf("-.-.-.-.-.-.-.--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-\n");
+    printf("\nDigite um numero inteiro:\n");
+    scanf("%d",&num);
+    resp = num % 2;
+    switch(resp){
+        case 0:
+        printf("%d, é um numero é par\n", num);
+        break;
+        default:
+        printf("%d, é um numero é impar\n", num);
+        break;
+    }
+    printf("\nDeseja continuar? (1) para sim (0) para não:\n");
+    scanf("%d", &op);
+    }while(op==1);  
+  
+    
+   printf("\n");
+   printf("-.-.-.-.-.-.-.--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-");
+   printf("\n                     FIM DO PROGRAMA\n");
+   printf("-.-.-.-.-.-.-.--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-");
+    
+
+    return 0;
+}

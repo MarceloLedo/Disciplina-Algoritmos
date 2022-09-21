@@ -1,0 +1,27 @@
+/******************************************************************************
+
+             Faça um programa que leia a quantidade de carrro
+            que uma empresa vendeu. em seguida capture e some 
+    todos os valores deste carros. Mostre o total faturado pela empresa.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    int cont=1, qdcarro=0;
+    float valor=0, soma=0;
+    printf("Digite A Quantidade de Carros vendidos: ");
+    scanf("%d", &qdcarro);
+    
+    for(cont = 1; cont <= qdcarro; cont++)
+    {
+        printf("digite o valor do carro:\n");
+        scanf("%f", &valor);
+        soma=valor+soma;
+    }
+    printf("o valor total das %d vendas é: %.f", qdcarro, soma);
+
+    return 0;
+}
