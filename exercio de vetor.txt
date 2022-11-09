@@ -1,0 +1,34 @@
+/******************************************************************************
+Preencher um vetor com numeros inteiros  (10 unidade), solicitar um numero do teclado
+presquisar se esse numero existe no vetor. 
+se exitir, imprimir em qual posição do vetor o numero esta 
+se não exitir, imprima uma mensagem infomando que não existe.
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+ int cont, num=0, ponum=-1;
+ int vet[10];
+   for(cont=0; cont<10; cont++){
+       printf("informe o valor do indice %d: ", cont);
+       scanf("%d", &vet[cont]);
+    }
+   printf("digite um numero para prsquisar no vetor: ");
+   scanf("%d", &num);
+   
+   for(cont=0; cont<10; cont++){
+      if (vet[cont] == num){
+        ponum = cont;
+        break;
+      }
+   }
+    if(ponum==-1){
+        printf("numero não exite no vetor");
+    }else{
+        
+        printf("o numero pesquisado esta na posição %d", ponum);
+    }
+    return 0;
+}

@@ -1,0 +1,25 @@
+/******************************************************************************
+preencher um vetor com os numeros pares de 2 a 20.
+preencher um vetor com os numeros de 10 a 19.
+somar as respectivas posições em um terceiro vetor.
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+ int cont, num1=2, num2=10;
+ int vet1[10], vet2[10], vet3[10];
+   for(cont=0; cont<10; cont++){
+     vet1[cont] = num1;
+     num1 = num1 +2;
+     
+     vet2[cont] = num2;
+     num2++;
+     
+     vet3[cont] = vet1[cont] + vet2[cont];
+     
+    }
+   printf("\n");
+    return 0;
+}

@@ -1,0 +1,19 @@
+/******************************************************************************
+preencher um vetor com os numeros impares do numero 1 a 19.
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+ int cont, num=1;
+ int vet[10];
+   for(cont=0; cont<10; cont++){
+     vet[cont] = num;
+     num = num +2;
+     
+     printf("%d\t", vet[cont]); 
+    }
+   printf("\n");
+    return 0;
+}
